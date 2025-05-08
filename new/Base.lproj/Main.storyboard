@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xFq-nZ-beF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xzt-aW-mgw">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -75,7 +76,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="new screen"/>
                                 <connections>
-                                    <segue destination="4xc-RC-zdI" kind="presentation" identifier="toDetailsShift" id="HFB-7d-iQZ"/>
+                                    <segue destination="4xc-RC-zdI" kind="show" identifier="toDetailsShift" id="HFB-7d-iQZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -97,17 +98,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028.2442748091603" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="1954.9618320610687" y="-27.464788732394368"/>
         </scene>
         <!--Details Shift View Controller-->
         <scene sceneID="K70-fJ-35c">
             <objects>
                 <viewController id="4xc-RC-zdI" customClass="DetailsShiftViewController" customModule="new" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5hF-yE-yVF" customClass="Deta">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6BK-q3-O3R">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6BK-q3-O3R">
                                 <rect key="frame" x="0.0" y="50" width="401" height="753"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -122,12 +123,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CuC-s2-k0Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1837.4045801526718" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="2764.1221374045799" y="-27.464788732394368"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Shift-->
         <scene sceneID="qwM-ZV-z5h">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xFq-nZ-beF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Shift" image="sun.horizon" catalog="system" id="gEu-9b-H42"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LGb-Vk-D4E">
                         <rect key="frame" x="0.0" y="118" width="393" height="44"/>
@@ -140,12 +142,54 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYS-R1-4M2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1028.2442748091603" y="-27.464788732394368"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="29W-lX-zVd">
+            <objects>
+                <viewController id="QSd-Dj-Tsk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oXA-yv-mWz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ka2-sp-j9v"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="Deb-ak-3DN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BSj-db-nmZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028" y="714"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Rem-Y8-JoB">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Xzt-aW-mgw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M1T-C6-Nrv">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="selectedImageTintColor" name="Purple"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="xFq-nZ-beF" kind="relationship" relationship="viewControllers" id="0Nu-me-njQ"/>
+                        <segue destination="QSd-Dj-Tsk" kind="relationship" relationship="viewControllers" id="NDp-g5-3BF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kej-eI-rZ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="101.5267175572519" y="-27.464788732394368"/>
         </scene>
     </scenes>
     <resources>
+        <image name="sun.horizon" catalog="system" width="128" height="79"/>
+        <namedColor name="Purple">
+            <color red="0.62400001287460327" green="0.50800001621246338" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
