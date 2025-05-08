@@ -25,7 +25,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setLayout()
-        label.text = "OIE"
     }
     
     func setLayout()
@@ -41,10 +40,18 @@ class ViewController: UIViewController {
         self.shift = (shift == .morning) ? .night : .morning
         setLayout()
     }
+    
     @IBAction func changeName(_ sender: Any) {
         self.name = textField.text ?? ""
         textField.text = ""
         setLayout()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailsShift" {
+            let detailsShiftViewControlller = segue.destination as! DetailsShiftViewController
+            detailsShiftViewControlller.shift = self.shift
+        }
     }
     
 }
