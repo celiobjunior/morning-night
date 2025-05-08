@@ -6,7 +6,7 @@ This project was developed as an activity for the course "Introdução ao desenv
 
 - **Storyboard and Xcode**
 - **Outlets and Actions**
-- **Source fiel
+- **Source fields**
 - **Auto Layout and Constraints**
 - **Stack Views**
 - **Navigation Controller**
